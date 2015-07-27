@@ -57,3 +57,4 @@ gem 'bourbon'
 # Delay jobs
 gem 'activejob'
 gem "sidekiq"
+gem "mysql2"
