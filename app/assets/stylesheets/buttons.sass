@@ -1,0 +1,91 @@
+.button
+  display: inline-block
+  padding: 0 15px
+  height: 40px
+  line-height: 40px
+  text-align: center
+  font-size: 15px
+  cursor: pointer
+  font-family: "HelveticaNeue-Regular"
+  text-decoration: none
+  transition: .2s all
+  box-sizing: border-box
+  border-radius: 2px
+
+
+  &.blue
+    background: #3DB8DB
+    border: 1px solid #3DB8DB
+    color: #fff
+
+    &:hover
+      background: #68CEEB
+      border: 1px solid #68CEEB
+
+  &[disabled]
+    background: #DFE3E9
+    border: 1px solid #DFE3E9
+    color: #fff
+
+    &:hover
+      background: #DFE3E9
+      border: 1px solid #DFE3E9
+      color: #fff
+
+
+  &.ghost
+    background: #fff
+    color: #7C8A95
+    border: 1px solid #ADC1C8
+
+    &:hover
+      background: #ADC1C8
+      color: #fff
+
+
+.button-group
+  @extend .button
+  padding: 0px
+
+  &.blue
+    border: 0px solid #fff
+
+    &:hover
+      border: 0px solid #fff
+
+  .plus
+    float: left
+    width: 40px
+    height: 40px
+    background: asset-url("plus@2x.png") no-repeat
+    background-size: 50%
+    background-position: 50% 50%
+    border-right: 1px solid #8AD4E9
+
+    &:after
+      content: "\a0"
+
+  .content
+    font-family: "HelveticaNeue-Light"
+    font-size: 14px
+    float: left
+    padding: 0px 15px
+
+
+.button.small
+  height: 30px
+  line-height: 31px
+  font-size: 13px
+  font-family: 'HelveticaNeue-Light'
+  border: none
+  border-radius: 50px
+
+  &.blue
+    background: #EAF2F4
+    color: #3DB8DB
+
+    &:hover
+      border: none
+      background: #3DB8DB
+      color: #EAF2F4
+

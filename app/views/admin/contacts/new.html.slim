@@ -1,0 +1,5 @@
+legend Добавить контакт
+
+.row
+  .col-md-8
+    = render partial: "admin/contacts/form", locals: {contact: @contact, url: admin_contacts_path}

@@ -1,0 +1,19 @@
+table
+  tr
+    td Название салона
+    td = @order.contact.name
+  tr
+    td Сайт салона
+    td
+      a(href = @order.contact.url)
+        = @order.contact.url
+
+  tr
+    td EMAIL
+    td = @order.email
+
+  tr
+    td Ссылка на контакт в системе
+    td
+      a(href = "http://a1234.ru/admin/contacts/#{@order.contact_id}")
+        = "http://a1234.ru/admin/contacts/#{@order.contact_id}"

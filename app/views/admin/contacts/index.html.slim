@@ -1,0 +1,44 @@
+legend
+  | Контакты
+
+  a.btn.btn-default (href = new_admin_contact_path style = "float: right") Добавить
+
+
+table.table
+  thead
+    tr
+      th Название
+      th Номер телефона
+      th Сайт
+      th Email
+      th Код
+      th Статус
+      th ...
+
+  tbody
+    - @contacts.each do |contact|
+      tr
+        td = contact.name
+        td = contact.phone
+        td
+          a (href = contact.url target = "_blank") = contact.url
+        td = contact.email
+        td = contact.code
+        td
+          - if contact.fresh?
+            span.label.label-default Новый
+
+          - if contact.rejected?
+            span.label.label-danger Отказ
+
+          - if contact.in_progress?
+            span.label.label-primary В процессе
+
+          - if contact.recall?
+            span.label.label-warning Перезвонить
+
+          - if contact.success?
+            span.label.label-success Успех
+        td
+          = link_to "подробнее", admin_contact_path(contact)
+          = link_to "редактировать", edit_admin_contact_path(contact)

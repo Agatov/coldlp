@@ -1,0 +1,21 @@
+legend
+  | Заявки
+
+
+table.table
+  thead
+    tr
+      th Название салона
+      th Сайт
+      th Email
+      th Дата
+
+  tbody
+    - @orders.each do |order|
+      tr
+        td
+          = link_to order.contact.name, admin_contact_path(order.contact)
+        td
+          a (href = order.contact.url) = order.contact.url
+        td = order.email
+        td = order.created_at.strftime "%Y-%m-%d %H:%M"
