@@ -29,6 +29,7 @@ $ ->
         if data.status == "success"
           $(".index").hide()
           $(".success").show()
+          $("input[type=text]").val ''
 
         if data.status == "error"
           $(".index").hide()
