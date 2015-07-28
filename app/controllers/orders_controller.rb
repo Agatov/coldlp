@@ -12,9 +12,8 @@ class OrdersController < ApplicationController
         order.email = params[:email]
         order.save
 
-        OrderMailer.new_order_email(order).deliver_later(wait: 1.minute)
-
-        OrderMailer.welcome_email(order).deliver_later(wait: 1.minute)
+        OrderMailer.new_order_email(order).deliver_later
+        OrderMailer.welcome_email(order.email).deliver_later
       end
 
       render json: {status: :success}
