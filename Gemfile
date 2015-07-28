@@ -56,3 +56,4 @@ gem 'bourbon'
 gem 'activejob'
 gem "sidekiq"
 gem "mysql2"
+gem 'sinatra', :require => nil
