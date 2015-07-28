@@ -55,5 +55,6 @@ gem 'bourbon'
 # Delay jobs
 gem 'activejob'
 gem "sidekiq"
+gem "sidekiq-status"
 gem "mysql2"
 gem 'sinatra', :require => nil
