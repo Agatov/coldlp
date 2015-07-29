@@ -22,4 +22,3 @@ config/development.sphinx.conf
 *.DS_Store
 .keep
 copy.sh
-db/schema.rb
