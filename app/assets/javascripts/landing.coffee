@@ -7,7 +7,7 @@ $ ->
 
 
     shake_fields = []
-    r = /^\w+@\w+\.\w{2,4}$/i
+    r = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i
 
 
     unless r.test(email)
