@@ -2,6 +2,7 @@ class Contact < ActiveRecord::Base
   before_create :generate_unique_code
 
   has_many :orders
+  has_many :comments
 
   enum status: [:fresh, :rejected, :in_progress, :recall, :success]
 
