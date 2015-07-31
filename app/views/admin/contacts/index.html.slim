@@ -7,6 +7,7 @@ legend
 table.table
   thead
     tr
+      th
       th Название
       th Номер телефона
       th Сайт
@@ -16,8 +17,11 @@ table.table
       th ...
 
   tbody
+    - i = 0
     - @contacts.each do |contact|
+      - i += 1
       tr
+        td = i.to_s
         td = contact.name
         td = contact.phone
         td
