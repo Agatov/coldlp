@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :orders, only: :index
+    resources :orders, only: [:index, :destroy]
     resources :contacts do
       resources :comments, only: [:create, :destroy]
     end

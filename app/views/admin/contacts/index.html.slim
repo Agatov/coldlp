@@ -41,4 +41,7 @@ table.table
             span.label.label-success Успех
         td
           = link_to "подробнее", admin_contact_path(contact)
+          br
           = link_to "редактировать", edit_admin_contact_path(contact)
+          br
+          = link_to "удалить", admin_contact_path(contact), method: :delete

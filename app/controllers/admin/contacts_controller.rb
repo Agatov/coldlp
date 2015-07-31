@@ -33,6 +33,7 @@ class Admin::ContactsController < AdminController
 
   def destroy
     @contact = Contact.find params[:id]
+    @contact.orders.destroy_all
     @contact.destroy
     redirect_to admin_contacts_path
   end
